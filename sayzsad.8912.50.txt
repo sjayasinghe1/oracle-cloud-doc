@@ -1,0 +1,50 @@
+Project inception happened due to recorded discrepancies in company financial accounts where management decision of implementing a vendor specific Point of Sales system with procurement functions integrated to Oracle applications.
+There were 13 endpoints according to the documentation which mainly focuses on GL, and Procurement to Payment. Project ran for planned 9 months but incurred delays due to requested modifications to the business process. Main changes were outlet\warehouse purchases has to be done from outlet\warehouse not from back office, document approval hierarchy definition, automate goods receiving, and carry out payments in more effecciently. Apart from that special considerations has to be made due to current affairs in the company like welfare, promotions\loyalty etc. 
+Analysis
+Legacy system was observed in couple of times to capture the requirements. Conducted user guide based trainings mainly concentrating on maintenance and development and data conversions. Initiated AIM documentations from requested business process changes, requirements definition for Oracle applications based on current and change of business processes. After that user guides prepared for further analysis support system design.
+Design
+Based on analyzed business process changes and future of vendor specific ERP system design highlighted use of proposed 13 endpoints which will be integrated Oracle applications whenever there is system improvements continues during next 10 years.
+•	System design selected document creation interfaces instead of APIs because SOA.
+•	More weight on modularizing the logic due to frequent requested changes which later will be changed to more structured.
+•	Application level scheduling not database jobs to use application level to support DevOps roadmap.
+
+Development
+Extensions and Customizations made in Oracle application
+•	Web ADI
+•	Custom number sequences
+•	Customized filtering
+•	Display third-party information
+
+Testing
+Validating the work
+•	Regression testing
+•	Integration testing
+•	Stress testing
+
+Constrains and applied on resources
+•	Authorizing using user responsibility
+•	User management options available
+•	Employee positions\hierarchies
+
+Risk management
+•	Integration testing taken into account when communicate and acknowledge the data transfer endpoints specified by analysts. Production network used for this integration is LAN where testing instances currently running and use for future use is WAN connected to internet. Data transfer is to be highly concerned at both of this production and testing purposes before and after the implantation in order to comply with standard data transfer protocols and interchange between the respective instances. 
+•	Because there are many ways of functioning the PBSA POS system. As a result of that the data they send and receive may vary even their documentation defines. PBSA POS documentation for procurement is providing high level functioning tasks and to mitigate the risks we have listed and fixed the steps of using it. Same time Oracle procurement functions has to be restricted to align with receiving and sending data to PBSA POS. And requires attention on redundant functions and information available on both integrated third-party and Oracle applications.
+
+QA
+•	Quality assurance techniques at each stage focuses on workflow, processes, practical guide using screens etc and test data for verification purpose
+•	Test scripts were designed in LSL and SW systems  the interface with back office procurement and finance teams, end users at warehouses\outlets and who are handling minor tasks like excess goods, waste goods, rearranging the packages and  related let overs which are not recorded in systems as critical functions.
+•	When development related extreme programming is used
+•	Issues to code review even when automated
+
+Implementation
+•	Dot-matrix printer architecture for direct printing
+•	SSO logins from MS windows and Limited user licenses
+•	Data transfer protocols – SSL certificates and Oracle Wallet
+•	Log management
+•	Code quality tools 
+•	API documentations
+•	Code repositories
+•	Team foundation server\Azure devops server
+
+Project executed with teams divided into technical experts and domain experts with system functional skills. While running in this phase due to high risks and costs project tasks involved in many demonstrations to training sessions to capture specific requirements align with future system improvements.
+Project closure planned in cutover with current master and transaction data conversion, providing operational reports, management reports, and final accounts more accurately.
