@@ -1,0 +1,36 @@
+Oracle EBS
+technical
+. Report Builder (rdf, BI publisher)
+. SQL Reports (write queries\export\ourt join tip and union all tip)
+. SPs
+. Change Management (SR\Incident\Problem\backlog, RFC, approvals, DBA and production)
+. Workflow Builder (approvals)
+. Form Builder (custom module)
+. OAF personalization (VO - change VO and add new fields, Controller - Java coding logic to OAF page)
+. Oracle form personalization (event, restrictions to user\responsibility, item\message\built-in)
+. FNDLOAD (concurrent programs, personlizations)
+. PL\SQL APIs (custom programs)
+. EBS APIs (Master data, data fixes)
+. APEX and REST web services
+. Oracle Linux administartion (Printer server, Limited user logins, SSL certification update)
+. Oracle database adminstration (cp, mv, pwd, ldt, ll, ls, >>, lpr)
+functional
+. iSetup
+. User\responsibility\responsibility group\executable\concurrent program\XML data definition and template
+. User administration
+. DFF and value set
+. Team Foundation Server
+. AIM documentation
+
+Oracle Fusion
+technical
+. web services and integration (GL interface, customer, AR invoice and receipt)
+. BI publisher reports (data model and template)
+. ODBC and PL\SQL APIs
+. APEX applications
+. Fusion page customization and sandbox
+. Report testing (unit testing, QA)
+functional
+. ESS creation and value sets
+. Fusion resposibility
+. AIM documentation
