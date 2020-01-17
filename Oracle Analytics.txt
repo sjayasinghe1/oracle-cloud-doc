@@ -1,0 +1,12 @@
+3:50 PM 1/16/2020 - 4:50 PM 1/16/2020
+Oracle Analytics
+3rd party and other non-Oracle Databases
+
+Console - Administration
+Data - Data Set\Data Flow\Sequence
+Catalog - Dashboards\Analytics
+Create Project - types of DVs (pivot/table/graph and calculations for data)
+PREPARE (conn.) -> VISUALIZE (project) -> NARRATTE (canvas)
+Share as files/LinkedIn/public websites etc.
+Note: Auto Update, narrate, export and import, snapshot for backup, role management, developer - embed/JSON
+JOBs - Dataflow (Groups/ML/Unions/Save data)
