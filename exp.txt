@@ -1,19 +1,18 @@
 Oracle EBS
 technical
 . Report Builder (rdf, BI publisher)
-. SQL Reports (write queries\export\ourt join tip and union all tip)
-. SPs
+. SQL Reports (write queries\export\ourt join tip and union all tip\in-line, sub queries)
 . Change Management (SR\Incident\Problem\backlog, RFC, approvals, DBA and production)
-. Workflow Builder (approvals)
-. Form Builder (custom module)
+. Workflow Builder
+. Form Builder
 . OAF personalization (VO - change VO and add new fields, Controller - Java coding logic to OAF page)
 . Oracle form personalization (event, restrictions to user\responsibility, item\message\built-in)
 . FNDLOAD (concurrent programs, personlizations)
-. PL\SQL APIs (custom programs)
+. SPs (custom programs) and PL\SQL APIs (Data Types/Error Handling/Triggers/Control Statements/Tuning and Optimization)
 . EBS APIs (Master data, data fixes)
 . APEX and REST web services
-. Oracle Linux administartion (Printer server, Limited user logins, SSL certification update)
-. Oracle database adminstration (cp, mv, pwd, ldt, ll, ls, >>, lpr)
+. Oracle Linux administartion (cp, mv, pwd, ldt, ll, ls, >>, lpr)
+. Oracle database adminstration (sqlplus, patching, backup-archieve, bounce severs)
 functional
 . iSetup
 . User\responsibility\responsibility group\executable\concurrent program\XML data definition and template
@@ -29,8 +28,9 @@ technical
 . ODBC and PL\SQL APIs
 . APEX applications
 . Fusion page customization and sandbox
-. Report testing (unit testing, QA)
+. Prints and Report testing (unit testing, QA)
 functional
 . ESS creation and value sets
 . Fusion resposibility
 . AIM documentation
+. Oracle Analytic Cloud (Connection-3rd party/Data Set-SQL, Analytis, Subject Area/Project/DV-Prepare, Visualize, Narrate/Analytics-Dashboards, Agents, Conditions, Filters)
