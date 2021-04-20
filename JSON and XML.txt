@@ -1,0 +1,60 @@
+rtrim(xmlagg(xmlelement(e, invoice_num||',')).EXTRACT('//text()'),',')
+JSON_ARRAYAGG( 
+         JSON_OBJECT( 
+         'EXPENSE_ACCOUNT'         VALUE segment2) 
+       returning clob)
+
+select a.CODE,
+            a.ACCOUNT_DESC
+         from (
+          select 
+            CODE,
+            ACCOUNT_DESC
+           from xx_xml_output x,
+                         XMLTABLE('/DATA_DS/G_1'
+                           PASSING x.xml_data
+                           COLUMNS                   
+                            CODE VARCHAR2(50)  PATH 'CODE',
+                            ACCOUNT_DESC VARCHAR2(100) PATH 'ACCOUNT_DESC'
+                             ) ) a,
+                    XXASST_EXPENSE_ACCOUNTS_TBL b
+            where 1=1 
+            and a.CODE = b.CODE(+)
+            and b.CODE is null -- get only new records to the table
+                ;
+
+
+                            select INV_FILTER_ID
+                            from
+                            (
+--                                    select --to_char(ORA_INV_BATCH_ID) ORA_INV_BATCH_ID,
+--                                           to_char(INV_FILTER_ID) INV_FILTER_ID--,
+--                                           --FILTERED_FLAG
+--                                    from XXASST_FILTERED_INVOICES
+--                                    where 1 = 1
+--                                          and ora_inv_batch_id = l_ora_inv_batch_id
+--                                    INTERSECT
+                                    SELECT  --ORA_INV_BATCH_ID,
+                                            INV_FILTER_ID--,
+                                            --FILTERED_FLAG
+                                            FROM json_table((
+                                    select inv_payload
+                                    from
+                                    (
+                                    SELECT
+                                        inv_payload
+                                    FROM
+                                        XXASST_INV_FILTER_TBL
+                                    WHERE 1 = 1
+                                    order by ora_inv_batch_id desc, created_date desc
+                                    )
+                                    where rownum = 1
+                                    ) format JSON , '$' COLUMNS 
+                                             (NESTED PATH '$[*]' 
+                                             COLUMNS ( 
+                                                       --ORA_INV_BATCH_ID VARCHAR2 PATH '$.ORA_INV_BATCH_ID',
+                                                       INV_FILTER_ID VARCHAR2 PATH '$.INV_FILTER_ID'--,
+                                                       --FILTERED_FLAG VARCHAR2 PATH '$.FILTERED_FLAG'
+                                             )))
+                                    )
+                                    
